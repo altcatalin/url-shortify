@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:15-bullseye
+    restart: always
+    environment:
+      POSTGRES_DB: ${PGDATABASE}
+      POSTGRES_USER: ${PGUSER}
+      POSTGRES_PASSWORD: ${PGPASSWORD}
+    ports:
+      - "${PGPORT}:5432"
+    volumes:
+      - ./tmp/pgdata:/var/lib/postgresql/data

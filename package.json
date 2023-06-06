@@ -1,0 +1,41 @@
+{
+  "name": "url-shortify",
+  "version": "1.0.0",
+  "description": "URL Shortener",
+  "main": "src/app.js",
+  "scripts": {
+    "migrations": "node -r dotenv/config node_modules/.bin/postgrator migrate",
+    "start:dev": "nodemon -w .env -w src --inspect=0.0.0.0:9229 src/server.js | npx pino-pretty -S",
+    "test:clean": "rm -rf .nyc_output/* ./coverage/*",
+    "test:unit": "tap test/*.test.js"
+  },
+  "author": {
+    "name": "Catalin Piscureanu",
+    "url": "https://github.com/altcatalin"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  },
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "nodemon": "^2.0.22",
+    "pgmock2": "^2.1.6",
+    "prettier": "^2.8.8",
+    "tap": "^16.3.4"
+  },
+  "dependencies": {
+    "@fastify/helmet": "^10.1.1",
+    "@fastify/postgres": "^5.2.0",
+    "@fastify/sensible": "^5.2.0",
+    "@fastify/swagger": "^8.4.0",
+    "@fastify/swagger-ui": "^1.8.1",
+    "close-with-grace": "^1.2.0",
+    "env-schema": "^5.2.0",
+    "fastify": "^4.17.0",
+    "hashids": "^2.2.11",
+    "pg": "^8.11.0",
+    "postgrator-cli": "^6.0.1"
+  }
+}
