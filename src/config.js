@@ -33,6 +33,22 @@ module.exports = envSchema({
         type: 'string',
         default: 'info',
       },
+      APP_TRUST_PROXY: {
+        type: 'boolean',
+        default: false,
+      },
+      APP_REQUEST_ID_HEADER: {
+        type: 'string',
+        default: 'request-id',
+      },
+      APP_DOMAIN: {
+        type: 'string',
+        default: '',
+      },
+      APP_HTTPS: {
+        type: 'boolean',
+        default: false,
+      },
     },
   },
 })

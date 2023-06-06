@@ -14,12 +14,16 @@ module.exports = async function (config = {}) {
     logger: {
       level: config.APP_LOGGER_LEVEL,
     },
+    trustProxy: config.APP_TRUST_PROXY,
+    requestIdHeader: config.APP_REQUEST_ID_HEADER,
   })
 
   app.decorate('config', config)
   app.decorate('utils', {
     hashids: new Hashids(packageJSON.name, 6),
-    serverUrl: `http://${config.APP_HOST}:${config.APP_PORT}`,
+    serverUrl: `${config.APP_HTTPS ? 'https' : 'http'}://${
+      config.APP_DOMAIN ? config.APP_DOMAIN : `${config.APP_HOST}:${config.APP_PORT}`
+    }`,
   })
 
   app.register(fastifySensible)
@@ -138,6 +142,7 @@ module.exports = async function (config = {}) {
   })
 
   app.get('/', async function (request, reply) {
+    request.log.info(request.headers)
     return reply.redirect(302, '/docs')
   })
 
