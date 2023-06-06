@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/url-shortify/url-shortify/compare/v1.1.0...v1.1.1) (2023-06-06)
+
+
+### Bug Fixes
+
+* remove unnecessary log output ([d41e61a](https://github.com/url-shortify/url-shortify/commit/d41e61ab6b811bf97f106581f8543aa14463f280))
+
 ## [1.1.0](https://github.com/url-shortify/url-shortify/compare/v1.0.0...v1.1.0) (2023-06-06)
 
 
