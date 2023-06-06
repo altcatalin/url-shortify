@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/url-shortify/url-shortify/compare/v1.0.0...v1.1.0) (2023-06-06)
+
+
+### Features
+
+* add config options when running behind proxy ([69d4a97](https://github.com/url-shortify/url-shortify/commit/69d4a9789052daa62f3fa8d09a31727b2539db7e))
+
 ## 1.0.0 (2023-06-06)
 
 
