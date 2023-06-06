@@ -142,7 +142,6 @@ module.exports = async function (config = {}) {
   })
 
   app.get('/', async function (request, reply) {
-    request.log.info(request.headers)
     return reply.redirect(302, '/docs')
   })
 
