@@ -26,5 +26,5 @@ npm run start:dev
 npm run test:unit
 
 # install pre-commit hooks
-pre-commit install --hook-type commit-msg --hook-type pre-push
+pre-commit install --hook-type commit-msg
 ```
