@@ -28,3 +28,6 @@ npm run test:unit
 # install pre-commit hooks
 pre-commit install --hook-type commit-msg
 ```
+
+Swagger UI is available at [http://127.0.0.1:3000/docs/static/index.html](http://127.0.0.1:3000/docs/static/index.html).  
+
